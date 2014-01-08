@@ -1,0 +1,15 @@
+{
+  "name": "JOS SDK for Node",
+  "version": "0.0.0",
+  "description": "jingdong open server for node.js",
+  "main": "jos.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "jingdong",
+	"jos"
+  ],
+  "author": "Saint (saint@aliyun.com)",
+  "license": "Apache lisense 2"
+}
