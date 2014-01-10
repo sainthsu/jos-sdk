@@ -70,7 +70,7 @@ JOS.prototype.request = function(request,callback) {
 	if ('function' !== typeof callback) { throw new Error('callback function required'); }
 	if(this.checkRequest)
 	{
-		var request = require('./request/'+method);
+		request.check();
 	}
 	
 	request.apiParams = object;
