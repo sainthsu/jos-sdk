@@ -15,7 +15,18 @@ AfterSearchRequest.prototype.getMethod = function (){
 	return this.method;
 };
 
-AfterSearchRequest.prototype.checkParams = function () {
-	this.check.forEach(function(cell){
+AfterSearchRequest.prototype.checkParams = function (apiParams) {
+
+    var params = apiParams;
+	this.check.forEach(function(element){
+        if(element.equal('require'))
+        {
+            if(params[element] === undefined)
+            {
+                return new Error("apiParams:"+element+"which needed is undefined;");
+            }
+        }
 	});
 };
+
+module.exports = AfterSearchRequest;
