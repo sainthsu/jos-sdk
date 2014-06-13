@@ -3,6 +3,7 @@
  */
 var WareProductCatelogyListGet = {
     method:'jingdong.ware.product.catelogy.list.get',
+    authorizationType:false,
     check:{
         catelogyId:{
             type:'Number',

@@ -1,8 +1,8 @@
 /**
- * Created by Administrator on 14-4-21.
+ * Created by Saint on 14-4-21.
  */
-var BaseRequest={
-    getMethod:function (){
+var BaseRequest = {
+    getMethod:function () {
         return this.method;
     },
     checkParams:function (apiParams) {
