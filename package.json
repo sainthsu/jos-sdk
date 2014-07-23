@@ -4,7 +4,7 @@
   "description": "Jingdong Open Server SDK for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test/test.js"
   },
   "repository": {
      "type": "git",
@@ -16,9 +16,9 @@
   ],
   "author": "Saint (saint@aliyun.com)",
   "license": "Apache lisense 2",
-  "readmeFilename": "README.md",
-  "dependencies": {
+  "readmeFilename": "README.md"
+  /*"dependencies": {
       "urllib": ">=0.5.3"
-  }
+  }*/
 
 }

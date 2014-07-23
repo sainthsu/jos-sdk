@@ -1,21 +1,24 @@
 /**
- * Created by saint on 6/13/14.
+ * Created by saint on 7/23/14.
  */
-var WareCatelogyAttributeListGet = {
+
+var api = {
     method:'jingdong.ware.product.catelogy.list.get',
-    authorizationType:false,
+    authorization:false,
     check:{
-        newVersion:{
+        level:{
             type:'Number',
-            require:true
+            required:true
         },
         catelogyId :{
             type:'String',
-            require:true
+            required:true
         },
         client:{
             type:'String',
-            require:true
+            required:true
         }
     }
-};
+}
+
+module.exports = api;

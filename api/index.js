@@ -1,8 +1,6 @@
 /**
  * New node file
  */
-var urllib = require("urllib");
-
 
 var Request = function() {
 	this.apiMethod = null;
@@ -23,16 +21,12 @@ Request.prototype.set = function(setting,val){
 
 Request.prototype.use = function(method) {
 	this.api = require("./"+method);
-	this.apiMethod = this.api.getMethod();
-    this.apiParams['method'] = this.apiMethod;
+	this.apiMethod = this.api.method;
+    return this.api;
 };
 
 Request.prototype.check = function() {
     this.api.checkParams(this.apiParams);
 };
 
-Request.prototype.send = function() {
-    urllib.request();
-};
-
-module.exports = Request;
+module.exports = new Request();
