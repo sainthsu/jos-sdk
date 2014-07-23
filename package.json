@@ -1,5 +1,5 @@
 {
-  "name": "JOS",
+  "name": "jos",
   "version": "0.0.1",
   "description": "Jingdong Open Server SDK for Node.js",
   "main": "index.js",
@@ -14,11 +14,11 @@
     "jingdong",
 	"jos"
   ],
-  "author": "Saint (saint@aliyun.com)",
+  "author": {
+      "name" : "Saint Hsu",
+      "email" : "saint@aliyun.com",
+      "url" : "http://www.flakor.cn/"
+  },
   "license": "Apache lisense 2",
   "readmeFilename": "README.md"
-  /*"dependencies": {
-      "urllib": ">=0.5.3"
-  }*/
-
 }
