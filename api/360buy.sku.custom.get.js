@@ -1,18 +1,21 @@
 /**
- * Created by saint on 7/23/14.
+ * Created by saint on 7/24/14.
  */
+
+
 var api = {
-    method:'360buy.ware.update.listing',
+    method:'360buy.sku.custom.get',
     authorization:true,
     check:{
-        ware_id:{
+        outer_id:{
             type:'String',
             required:true
         },
-        trade_no:{
+        fields:{
             type:'String',
             required:true
         }
+
     }
 }
 

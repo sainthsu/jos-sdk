@@ -1,24 +1,16 @@
 /**
- * Created by saint on 7/23/14.
+ * Created by saint on 7/24/14.
  */
 
 var api = {
-    method:'jingdong.ware.product.catelogy.list.get',
+    method:'jingdong.ware.product.detail.search.list.get',
     authorization:false,
     check:{
-        catelogyId :{
+        skuId :{
             type:'Number',
             required:true
         },
-        level:{
-            type:'Number',
-            required:true
-        },
-        isIcon :{
-            type:'Boolean',
-            required:true
-        },
-        isDescription :{
+        isLoadWareScore :{
             type:'Boolean',
             required:true
         },

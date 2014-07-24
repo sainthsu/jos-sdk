@@ -1,0 +1,76 @@
+/**
+ * Created by saint on 7/24/14.
+ */
+
+var api = {
+    method:'360buy.wares.search',
+    authorization:true,
+    check:{
+        cid:{
+            type:'String',
+            required:false
+        },
+        start_price:{
+            type:'String',
+            required:false
+        },
+        end_price:{
+            type:'String',
+            required:false
+        },
+        page:{
+            type:'String',
+            required:true
+        },
+        page_size:{
+            type:'String',
+            required:true
+        },
+        title:{
+            type:'String',
+            required:false
+        },
+        order_by:{
+            type:'String',
+            required:false
+        },
+        start_time:{
+            type:'String',
+            required:false
+        },
+        end_time:{
+            type:'String',
+            required:false
+        },
+        start_modified:{
+            type:'String',
+            required:false
+        },
+        end_modified:{
+            type:'String',
+            required:false
+        },
+        ware_status:{
+            type:'String',
+            required:false
+        },
+        fields:{
+            type:'String',
+            required:false
+        },
+        parentShopCategoryId:{
+            type:'String',
+            required:false
+        },
+        shopCategoryId:{
+            type:'String',
+            required:false
+        },
+        itemNum:{
+            type:'String',
+            required:false
+        }
+    }
+}
+
+module.exports = api;

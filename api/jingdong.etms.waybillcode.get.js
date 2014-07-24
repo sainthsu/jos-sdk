@@ -1,19 +1,21 @@
 /**
- * Created by saint on 7/23/14.
+ * Created by saint on 7/24/14.
  */
+
+
 var api = {
-    method:'360buy.ware.update.listing',
+    method:'jingdong.etms.waybillcode.get',
     authorization:true,
     check:{
-        ware_id:{
+        preNum:{
             type:'String',
             required:true
         },
-        trade_no:{
+        customerCode:{
             type:'String',
             required:true
         }
     }
-}
+};
 
 module.exports = api;

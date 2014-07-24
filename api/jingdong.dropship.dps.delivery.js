@@ -1,32 +1,33 @@
 /**
- * Created by saint on 7/23/14.
+ * Created by saint on 7/24/14.
  */
 
 var api = {
-    method:'jingdong.ware.product.catelogy.list.get',
-    authorization:false,
+    method:'jingdong.dropship.dps.delivery',
+    authorization:true,
     check:{
-        catelogyId :{
+        customOrderId:{
             type:'Number',
             required:true
         },
-        level:{
+        carrierId:{
             type:'Number',
             required:true
         },
-        isIcon :{
-            type:'Boolean',
-            required:true
-        },
-        isDescription :{
-            type:'Boolean',
-            required:true
-        },
-        client:{
+        carrierBusinessName:{
             type:'String',
             required:true
+        },
+        shipNo:{
+            type:'String',
+            required:true
+        },
+        estimateDate:{
+            type:'Date',
+            required:true
         }
+
     }
-}
+};
 
 module.exports = api;

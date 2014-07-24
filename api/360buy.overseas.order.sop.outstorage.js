@@ -1,18 +1,21 @@
 /**
- * Created by saint on 7/23/14.
+ * Created by saint on 7/24/14.
  */
+
+
 var api = {
-    method:'360buy.ware.update.listing',
+    method:'360buy.overseas.order.sop.outstorage',
     authorization:true,
     check:{
-        ware_id:{
+        order_id:{
             type:'String',
             required:true
         },
         trade_no:{
             type:'String',
-            required:true
+            required:false
         }
+
     }
 }
 
