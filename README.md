@@ -7,21 +7,50 @@ JOS是面向电商的云服务平台。
 
 ## Usage
 
-###if use jos do auth
+###if use jossdk do auth
 ####for pure node http server
 ```javascript
-var jos = new JOS(appid,sign);
+var http = require("http");
+var SDK = require("../lib/jos");
 
-jos.setRedirectUrl("http://www.flakor.org");
-jos.setAuthPage("http://localhost:6868/auth");
-jos.handleAuth(req,res);
+var jos = new SDK("C0B9006470545DE1FF19943981D14915","8eb73dc2d8d34f80a0070692ae4f17d1");
+jos.setAuthPage("/oauth");
+jos.setRedirectUrl("/redirect");
 
-var result = jos.use("").set().set().set().request();
-var result = jos.use("").set({set:"66666"}).request();
+var server = http.createServer(function(req,res){
+
+    jos.handleAuth(req,res,function(err,data){
+        res.end(data);
+    });
+    jos.use("jingdong.ware.product.catelogy.list.get")
+        .set("catelogyId",123)
+        .set("level",123)
+        .set("isIcon",true)
+        .set("isDescription",true)
+        .set("client","jingdong")
+        .request(function(err,data){
+            res.end(data);
+        });
+});
+
+server.listen(6868);
 ```
 ####for express middleware
-//express.use("",jos.authHandler);
+```javascript
+var express = require('express');
+var app = express();
+var SDK = require("../lib/jos");
 
+var jos = new SDK("C0B9006470545DE1FF19943981D14915","8eb73dc2d8d34f80a0070692ae4f17d1");
+jos.setAuthPage("/oauth");
+jos.setRedirectUrl("http://flakor.com");
+
+app.use(jos.middleware(function(err,data){
+    console.log(data);
+}));
+app.listen(3000);
+console.log('Listening on port 3000');
+```
 ###only for api request
 ```javascript
 var jos = new JOS(appid,sign,token);
@@ -31,5 +60,5 @@ var result = jos.use("").set({set:"66666"}).request();
 ```
 ## Developing by
 
-saint(mailto:saint@aliyun.com)
+saint(mail:saint@aliyun.com)
 blog:http://www.flakor.cn

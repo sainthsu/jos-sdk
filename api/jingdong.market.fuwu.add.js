@@ -1,0 +1,76 @@
+/**
+ * Created by saint on 7/25/14.
+ */
+
+var api = {
+    method:'jingdong.market.fuwu.add',
+    authorization:true,
+    check:{
+        serviceCode:{
+            type:'String',
+            required:false
+        },
+        serviceName:{
+            type:'String',
+            required:false
+        },
+        service_status:{
+            type:'String',
+            required:false
+        },
+        serviceDetailUrl:{
+            type:'String',
+            required:false
+        },
+        serviceLogo:{
+            type:'String',
+            required:false
+        },
+        fwsPin:{
+            type:'String',
+            required:false
+        },
+        fwsId:{
+            type:'Number',
+            required:false
+        },
+        cid:{
+            type:'Number',
+            required:false
+        },
+        service_type:{
+            type:'Number',
+            required:false
+        },
+        appKey:{
+            type:'String',
+            required:false
+        },
+        itemCode:{
+            type:'String',
+            required:false
+        },
+        chargeType:{
+            type:'Number',
+            required:false
+        },
+        itemVersion:{
+            type:'Number',
+            required:false
+        },
+        chargeDays:{
+            type:'NumberArray',
+            required:false
+        },
+        pageDisplay:{
+            type:'NumberArray',
+            required:false
+        },
+        price:{
+            type:'NumberArray',
+            required:false
+        }
+    }
+};
+
+module.exports = api;

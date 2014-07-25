@@ -1,0 +1,84 @@
+/**
+ * Created by saint on 7/25/14.
+ */
+
+var api = {
+    method:'jingdong.market.service.qt.report.add',
+    authorization:true,
+    check:{
+        service_item_code:{
+            type:'String',
+            required:true
+        },
+        qt_code:{
+            type:'String',
+            required:true
+        },
+        qt_name:{
+            type:'String',
+            required:true
+        },
+        qt_type:{
+            type:'Number',
+            required:true
+        },
+        qt_standard:{
+            type:'String',
+            required:false
+        },
+        is_passed:{
+            type:'Number',
+            required:false
+        },
+        sp_name:{
+            type:'String',
+            required:true
+        },
+        message:{
+            type:'String',
+            required:false
+        },
+        submit_time:{
+            type:'String',
+            required:true
+        },
+        report_time:{
+            type:'String',
+            required:false
+        },
+        expiry_time:{
+            type:'String',
+            required:false
+        },
+        item_url:{
+            type:'String',
+            required:false
+        },
+        item_desc:{
+            type:'String',
+            required:false
+        },
+        report_url:{
+            type:'String',
+            required:false
+        },
+        ext_attr:{
+            type:'String',
+            required:false
+        },
+        num_iid:{
+            type:'Number',
+            required:false
+        },
+        status:{
+            type:'Number',
+            required:true
+        },
+        pin:{
+            type:'String',
+            required:true
+        }
+    }
+};
+
+module.exports = api;
