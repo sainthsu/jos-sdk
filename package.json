@@ -1,6 +1,6 @@
 {
   "name": "jossdk",
-  "version": "0.0.2beta",
+  "version": "0.0.2",
   "description": "Jingdong Open Server SDK for Node.js",
   "main": "index.js",
   "scripts": {

@@ -11,7 +11,7 @@ JOS是面向电商的云服务平台。
 ####for pure node http server
 ```javascript
 var http = require("http");
-var SDK = require("../lib/jos");
+var SDK = require("jossdk");
 
 var jos = new SDK("C0B9006470545DE1FF19943981D14915","8eb73dc2d8d34f80a0070692ae4f17d1");
 jos.setAuthPage("/oauth");
@@ -39,7 +39,7 @@ server.listen(6868);
 ```javascript
 var express = require('express');
 var app = express();
-var SDK = require("../lib/jos");
+var SDK = require("jossdk");
 
 var jos = new SDK("C0B9006470545DE1FF19943981D14915","8eb73dc2d8d34f80a0070692ae4f17d1");
 jos.setAuthPage("/oauth");
@@ -53,7 +53,8 @@ console.log('Listening on port 3000');
 ```
 ###only for api request
 ```javascript
-var jos = new JOS(appid,sign,token);
+var SDK = require("jossdk");
+var jos = new SDK(appid,sign,token);
 var result = jos.use("").set().set().set().request();
 or
 var result = jos.use("").set({set:"66666"}).request();
