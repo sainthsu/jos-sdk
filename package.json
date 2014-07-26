@@ -1,6 +1,6 @@
 {
   "name": "jossdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Jingdong Open Server SDK for Node.js",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,6 @@
       "email" : "saint@aliyun.com",
       "url" : "http://www.flakor.cn/"
   },
-  "license": "Apache lisense 2",
+  "license": "Apache lisense 2.0",
   "readmeFilename": "README.md"
 }
