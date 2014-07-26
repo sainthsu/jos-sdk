@@ -1,0 +1,9 @@
+0.0.3
+1,fix image upload!
+2,add date format function.
+    JOS.getTimestamp();
+0.0.2
+1,add more api files.
+2,fix use function
+0.0.1
+begin to develop
